@@ -5,6 +5,8 @@ const dateYear = document.getElementById('dateYear');
 
 const tasksContainer = document.getElementById('tasksContainer');
 
+let num = 0;
+
 const setDate = () => {
 	const date = new Date();
 	dateNumber.textContent = date.toLocaleString('en', { day: 'numeric' });
@@ -14,11 +16,13 @@ const setDate = () => {
 };
 
 const addNewTask = event => {
+	num++;
 	event.preventDefault();
 	const { value } = event.target.taskText;
 	if(!value) return;
 	const task = document.createElement('div');
 	task.classList.add('task', 'roundBorder');
+	task.setAttribute("id", num);
 	task.addEventListener('click', changeTaskState);
 	task.textContent = value;
 	tasksContainer.prepend(task);
