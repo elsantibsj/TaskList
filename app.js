@@ -59,4 +59,38 @@ const delTask = () => {
 	del().forEach(el => tasksContainer.removeChild(el))
 } 
 
+const changeTheme = () => {
+	const body = document.getElementById('body')
+	body.classList.contains('bodyDark') ? body.classList.remove('bodyDark') : body.classList.add('bodyDark')
+	
+	const h2 = document.getElementById('h2')
+	h2.classList.contains('textDark') ? h2.classList.remove('textDark') : h2.classList.add('textDark')
+	
+	const theme = document.getElementById('theme')
+	if (theme.classList.contains('textDark') && theme.classList.contains('bodyDark')){
+		theme.classList.remove('textDark');
+		theme.classList.remove('bodyDark');
+	}
+	else {
+		theme.classList.add('textDark');
+		theme.classList.add('bodyDark');
+	}
+
+	const main = document.getElementById('main')
+	main.classList.contains('listDark') ? main.classList.remove('listDark') : main.classList.add('listDark')
+
+	const date = document.getElementById('date')
+	date.classList.contains('textDark') ? date.classList.remove('textDark') : date.classList.add('textDark')
+
+	const input = document.getElementById('input')
+	if (input.classList.contains('bodyDark') && input.classList.contains('textDark')){
+		input.classList.remove('bodyDark');
+		input.classList.remove('bodyDark');
+	}
+	else {
+		input.classList.add('textDark');
+		input.classList.add('bodyDark');
+	}
+}
+
 setDate();

@@ -9,9 +9,11 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
-<body>
-	<div class="list roundBorder">
-		<div class="date">
+<body id="body">
+	<h2 id="h2">Your tasks here</h2>
+	<button id="theme" class="roundBorder" onclick="changeTheme()"><p>CHANGE THEME</p></button>
+	<div id="main" class="list roundBorder">
+		<div id="date" class="date">
 			<div class="dateRight">
 			<div id="dateNumber"></div>
 			<div>
@@ -22,7 +24,7 @@
 		<div id="dateText"></div>
 	</div>
 	<form onsubmit="addNewTask(event)" >
-		<input type="text" name="taskText" autocomplete="off" placeholder="New Task" class="roundBorder">
+		<input id="input" type="text" name="taskText" autocomplete="off" placeholder="New Task" class="roundBorder">
 		<button type="submit" class="addTaskButton">+</button>
 		<button type="button" class="orderButton roundBorder" onclick="renderOrderedTasks()">ORDER</button>
 		<button type="button" class="orderButton roundBorder" onclick="delTask()">DELETE</button>
