@@ -22,7 +22,7 @@ const addNewTask = event => {
 	if(!value) return;
 	const task = document.createElement('div');
 	task.classList.add('task', 'roundBorder');
-	task.setAttribute("id", num);
+	task.setAttribute('id', num);
 	task.addEventListener('click', changeTaskState);
 	task.textContent = value;
 	tasksContainer.prepend(task);
@@ -45,5 +45,18 @@ const order = () => {
 const renderOrderedTasks = () => {
 	order().forEach(el => tasksContainer.appendChild(el))
 }
+
+const del = () => {
+	const done = [];
+	const toDo = [];
+	tasksContainer.childNodes.forEach( el => {
+		el.classList.contains('done') ? done.push(el) : toDo.splice(el)
+	})
+	return [...toDo, ...done];
+}
+
+const delTask = () => {
+	del().forEach(el => tasksContainer.removeChild(el))
+} 
 
 setDate();
