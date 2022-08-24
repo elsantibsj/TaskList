@@ -25,7 +25,7 @@
 	</div>
 	<form onsubmit="addNewTask(event)" >
 		<input id="input" type="text" name="taskText" autocomplete="off" placeholder="New Task" class="roundBorder">
-		<button type="submit" class="addTaskButton">+</button>
+		<button id="addTaskButton" type="submit" class="addTaskButton">+</button>
 		<button type="button" class="orderButton roundBorder" onclick="renderOrderedTasks()">ORDER</button>
 		<button type="button" class="orderButton roundBorder" onclick="delTask()">DELETE</button>
 	</form>

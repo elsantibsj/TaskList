@@ -83,14 +83,17 @@ const changeTheme = () => {
 	date.classList.contains('textDark') ? date.classList.remove('textDark') : date.classList.add('textDark')
 
 	const input = document.getElementById('input')
-	if (input.classList.contains('bodyDark') && input.classList.contains('textDark')){
-		input.classList.remove('bodyDark');
-		input.classList.remove('bodyDark');
+	if (input.classList.contains('inputDark') && input.classList.contains('textDark')){
+		input.classList.remove('textDark');
+		input.classList.remove('inputDark');
 	}
 	else {
 		input.classList.add('textDark');
-		input.classList.add('bodyDark');
+		input.classList.add('inputDark');
 	}
+
+	const addTask = document.getElementById('addTaskButton');
+	addTask.classList.contains('taskDark') ? addTask.classList.remove('taskDark') : addTask.classList.add('taskDark');
 }
 
 setDate();

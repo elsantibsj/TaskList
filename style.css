@@ -16,6 +16,11 @@ body {
 	background-color: var(--dark)!important;
 }
 
+.inputDark {
+	background-color: var(--dark)!important;
+	border: 2px solid var(--light);
+}
+
 .listDark {
 	background-color: #14172D!important;
 }
@@ -124,6 +129,12 @@ input:focus {
 	color: var(--light);
 	cursor: pointer;
 }
+.taskDark {
+	background-color: var(--dark);!important;
+	color: var(--light)!important;
+	border: 2px solid var(--light);
+}
+
 .done{
 	background-color: var(--disabled);
 	text-decoration: line-through;
