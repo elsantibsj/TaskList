@@ -65,6 +65,9 @@ const changeTheme = () => {
 	
 	const h2 = document.getElementById('h2')
 	h2.classList.contains('textDark') ? h2.classList.remove('textDark') : h2.classList.add('textDark')
+
+	const darkText = document.getElementById('darkText')
+	darkText.classList.contains('textDark') ? darkText.classList.remove('textDark') : darkText.classList.add('textDark')
 	
 	const theme = document.getElementById('theme')
 	if (theme.classList.contains('textDark') && theme.classList.contains('bodyDark')){
@@ -94,6 +97,17 @@ const changeTheme = () => {
 
 	const addTask = document.getElementById('addTaskButton');
 	addTask.classList.contains('taskDark') ? addTask.classList.remove('taskDark') : addTask.classList.add('taskDark');
+
+	const moon = document.getElementById('moon');
+	moon.classList.contains('darkMoon') ? moon.classList.remove('darkMoon') : moon.classList.add('darkMoon');
+
+	if (moon.getAttribute('src') == "dark.png") {
+   		document.getElementById("moon").src="light.png";
+	}
+	else{
+		document.getElementById("moon").src="dark.png"
+	}
+	
 }
 
 setDate();

@@ -8,16 +8,28 @@
 
 body {
 	margin: 0;
-	height: 100vh;
+	height: 90vh;
 	background-color: var(--disabled);
 	font-family: 'Roboto', sans-serif;;
 }
+
+.noselect {
+  	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+    supported by Chrome, Edge, Opera and Firefox */
+}
+
 .bodyDark {
 	background-color: var(--dark)!important;
 }
 
 .inputDark {
 	background-color: var(--dark)!important;
+
 	border: 2px solid var(--light);
 }
 
@@ -30,19 +42,46 @@ body {
 }
 
 h2{
-	margin-top: 25px;
-	text-align: center;
 	color: var(--dark);
 }
 .textDark {
 	color: var(--light);
 }
 
-#theme{
-	width: 200px;
+#header{
+	margin: 25px auto;
 	height: 50px;
+	width: 500px;
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+}
+
+#theme{
+	background: none;
+	border: none;
+	margin-left: 150px;
+	max-width: 50px;
+	max-height: 30px;
+}
+#darkText{
+	position: relative;
+	left: 28%;
+	font-weight: 900;
+}
+
+#theme img{
+	position: relative;
+	right: 10px;
+	bottom: 8px;
+	width: 60px;
+	height: 40px;
 	cursor: pointer;
 }
+.darkMoon{
+	filter: invert(1);
+}
+
 
 .roundBorder {
 	border-radius: 5px;
