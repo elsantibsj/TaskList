@@ -27,6 +27,10 @@ body {
 	background-color: var(--dark)!important;
 }
 
+.taskListDark{
+	background-color: #323232!important;
+}
+
 .inputDark {
 	background-color: var(--dark)!important;
 
@@ -178,4 +182,10 @@ input:focus {
 	background-color: var(--disabled);
 	text-decoration: line-through;
 	color: var(--dark);
+}
+
+.doneDark{
+	background-color: black!important;
+	text-decoration: line-through;
+	color: white!important;
 }

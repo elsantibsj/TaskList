@@ -22,22 +22,23 @@ const addNewTask = event => {
 	if(!value) return;
 	const task = document.createElement('div');
 	task.classList.add('task', 'roundBorder');
-	task.setAttribute('id', num);
+	task.setAttribute('id', "t"+num);
 	task.addEventListener('click', changeTaskState);
 	task.textContent = value;
 	tasksContainer.prepend(task);
+	body.classList.contains('bodyDark') ? task.classList.add('taskListDark') : task.classList.remove('taskListDark');
 	event.target.reset();
 };
 
 const changeTaskState = event => {
-	event.target.classList.toggle('done');
+	body.classList.contains('bodyDark') ? event.target.classList.toggle('doneDark') : event.target.classList.toggle('done')
 };
 
 const order = () => {
 	const done = [];
 	const toDo = [];
 	tasksContainer.childNodes.forEach( el => {
-		el.classList.contains('done') ? done.push(el) : toDo.push(el)
+		el.classList.contains('done') || el.classList.contains('doneDark') ? done.push(el) : toDo.push(el)
 	})
 	return [...toDo, ...done];
 }
@@ -50,7 +51,7 @@ const del = () => {
 	const done = [];
 	const toDo = [];
 	tasksContainer.childNodes.forEach( el => {
-		el.classList.contains('done') ? done.push(el) : toDo.splice(el)
+		el.classList.contains('done') || el.classList.contains('doneDark') ? done.push(el) : toDo.splice(el)
 	})
 	return [...toDo, ...done];
 }
@@ -106,6 +107,21 @@ const changeTheme = () => {
 	}
 	else{
 		document.getElementById("moon").src="dark.png"
+	}
+
+	for (let i=1; i<=num; i++) {
+	const task = document.querySelector("#t"+String(i));
+	body.classList.contains('bodyDark') ? task.classList.add('taskListDark') : task.classList.remove('taskListDark');
+	if (task.classList.contains('done')) {
+		task.classList.remove('done');
+   		task.classList.add('doneDark');
+	}
+	else if (task.classList.contains('doneDark')){
+		task.classList.remove('doneDark');
+		task.classList.add('done');
+	}
+
+
 	}
 	
 }
