@@ -102,6 +102,9 @@ const changeTheme = () => {
 	const date = document.getElementById('date')
 	date.classList.contains('textDark') ? date.classList.remove('textDark') : date.classList.add('textDark')
 
+	quote.classList.contains('textDark') ? quote.classList.remove('textDark') : quote.classList.add('textDark')
+	owner.classList.contains('textDark') ? owner.classList.remove('textDark') : owner.classList.add('textDark')
+
 	const input = document.getElementById('input')
 	if (input.classList.contains('inputDark') && input.classList.contains('textDark')){
 		input.classList.remove('textDark');
