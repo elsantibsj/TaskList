@@ -7,9 +7,14 @@
 }
 
 body {
-	margin: 0;
-	background-color: var(--disabled);
-	font-family: 'Roboto', sans-serif;;
+	box-sizing: border-box;
+  	margin: 0;
+  	position: relative;
+  	background-color: var(--disabled);
+  	padding-bottom: 3em;
+  	min-height: 100vh;
+	font-family: 'Roboto', sans-serif;
+	overflow-x: hidden;
 }
 
 .noselect {
@@ -24,6 +29,10 @@ body {
 
 .bodyDark {
 	background-color: var(--dark)!important;
+}
+
+.borderDark{
+	border: 1px solid #1B1B1B!important;
 }
 
 .taskListDark{
@@ -49,19 +58,29 @@ body {
 	font-family: 'Bebas Neue', cursive;
 	font-size: 40px;
 	letter-spacing: 4px;
+	text-align: center;
 }
 .textDark {
-	color: var(--light)!important;
+	color: #CCCCCC!important;
 }
 
 #header{
 	white-space: nowrap;
-	margin: 25px auto;
-	height: 50px;
-	width: 300px;
-	display: flex;
-	justify-content: center;
-  	align-items: center;
+	height: 30px;
+	width: 100%;
+  	background-color: #fff;
+  	border: 1px solid #D9D9D9;
+}
+
+#headerTitle{
+	float: left;
+	font-size: 25px;
+	margin-top: 0;
+	margin-left: 10px;
+	letter-spacing: 4px;
+	color: #DC1717;
+	text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.61);
+	font-family: 'Bebas Neue', cursive;
 }
 
 #topContainer{
@@ -69,7 +88,6 @@ body {
 	padding: 0;
 	height: 500px;
 	width: 100%;
-	max-width: 1000px;
 }
 
 #quotes{
@@ -77,28 +95,32 @@ body {
 	font-size: 12px;
 	float: left;
 	margin-left: 2%;
-	width: 25%;
+	width: 250px;
 	text-align: center;
 }
 
 #button{
-	margin-top: -100px;
 	width: 200px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	float: right;
 }
 
 #theme{
-	background: none;
+	background-color: red;
 	border: none;
 	float: right;
-	margin-right: 20px;
-	margin-top: 12px;
-	max-width: 50px;
-	max-height: 30px;
+	margin-top: -8px;
+	margin-left: 15px;
+	max-width: 1px;
+	max-height: 1px;
 }
 
 #darkText{
 	float: left;
+	font-size: 15px;
 	margin-left: 20px;
 	font-weight: 900;
 }
@@ -107,8 +129,8 @@ body {
 	position: relative;
 	right: 10px;
 	bottom: 8px;
-	width: 60px;
-	height: 40px;
+	width: 40px;
+	height: 25px;
 	cursor: pointer;
 }
 .darkMoon{
@@ -121,6 +143,8 @@ body {
 }
 
 .list {
+	position: relative;
+    z-index: 99;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 0;

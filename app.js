@@ -78,15 +78,19 @@ const delTask = () => {
 
 const changeTheme = () => {
 	const body = document.getElementById('body')
-	body.classList.contains('bodyDark') ? body.classList.remove('bodyDark') : body.classList.add('bodyDark')
+	body.classList.contains('bodyDark') ? body.classList.remove('bodyDark') : body.classList.add('bodyDark');
 	
-	const title = document.getElementById('title')
-	title.classList.contains('textDark') ? title.classList.remove('textDark') : title.classList.add('textDark')
+	const header = document.getElementById('header')
+	header.classList.contains('bodyDark') ? header.classList.remove('bodyDark') : header.classList.add('bodyDark');
+	header.classList.contains('borderDark') ? header.classList.remove('borderDark') : header.classList.add('borderDark');
 
-	const darkText = document.getElementById('darkText')
-	darkText.classList.contains('textDark') ? darkText.classList.remove('textDark') : darkText.classList.add('textDark')
+	const title = document.getElementById('title')
+	title.classList.contains('textDark') ? title.classList.remove('textDark') : title.classList.add('textDark');
+
+	const darkText = document.getElementById('darkText');
+	darkText.classList.contains('textDark') ? darkText.classList.remove('textDark') : darkText.classList.add('textDark');
 	
-	const theme = document.getElementById('theme')
+	const theme = document.getElementById('theme');
 	if (theme.classList.contains('textDark') && theme.classList.contains('bodyDark')){
 		theme.classList.remove('textDark');
 		theme.classList.remove('bodyDark');
