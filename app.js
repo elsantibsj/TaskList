@@ -7,6 +7,22 @@ const tasksContainer = document.getElementById('tasksContainer');
 
 let num = 0;
 
+const quotes = ["Life is like riding a bicycle. To keep your balance, you must keep moving.", 
+"Whatever the mind of man can concieve and believe, it can achieve.", 
+"The happiness of your life depends upon the quality of your thoughts."];
+
+const owners = ["Albert Einstein", "Napoleon Hill", "Marcus Aurelius"];
+
+const quote = document.getElementById('quote');
+
+const owner = document.getElementById('owner');
+
+choose = Math.floor(Math.random() * quotes.length);
+
+quote.innerHTML = quotes[choose];
+owner.innerHTML = owners[choose];
+
+
 const setDate = () => {
 	const date = new Date();
 	dateNumber.textContent = date.toLocaleString('en', { day: 'numeric' });
