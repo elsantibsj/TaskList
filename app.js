@@ -80,8 +80,8 @@ const changeTheme = () => {
 	const body = document.getElementById('body')
 	body.classList.contains('bodyDark') ? body.classList.remove('bodyDark') : body.classList.add('bodyDark')
 	
-	const h2 = document.getElementById('h2')
-	h2.classList.contains('textDark') ? h2.classList.remove('textDark') : h2.classList.add('textDark')
+	const title = document.getElementById('title')
+	title.classList.contains('textDark') ? title.classList.remove('textDark') : title.classList.add('textDark')
 
 	const darkText = document.getElementById('darkText')
 	darkText.classList.contains('textDark') ? darkText.classList.remove('textDark') : darkText.classList.add('textDark')
